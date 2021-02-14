@@ -1,0 +1,3 @@
+interface objectWeather{
+    children:Array
+}

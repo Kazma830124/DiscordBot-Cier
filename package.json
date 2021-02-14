@@ -1,0 +1,22 @@
+{
+  "name": "weather-robot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "del /q /s \"./dist\" && tsc && node ./dist/index.js"
+  },
+  "author": "kazma",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "increase-memory-limit": "^1.0.7",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.23",
+    "@types/request": "^2.48.5"
+  },
+  "description": ""
+}
