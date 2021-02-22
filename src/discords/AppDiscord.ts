@@ -1,6 +1,7 @@
 import { ArgsOf, Command, CommandMessage, CommandNotFound, Discord, Guard, On } from "@typeit/discord";
 
-@Discord("!")
+const discordRegex =new RegExp("(?=Cier |cier |!).*")
+@Discord(discordRegex)
 export abstract class AppDiscord {
     /**
         * @param message: Type message automatically 
@@ -23,6 +24,6 @@ export abstract class AppDiscord {
 
     @CommandNotFound()
     private notFound(message: CommandMessage) {
-
+        message.reply("別傻了，我根本沒這功能...")
     }
 }
