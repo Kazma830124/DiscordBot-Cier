@@ -1,16 +1,14 @@
 import { ArgsOf, Command, CommandMessage, CommandNotFound, Discord, Guard, On } from "@typeit/discord";
-
+import * as Path from 'path'
 const discordRegex =new RegExp("(?=Cier |cier |!).*")
+// @Discord(discordRegex,{
+// import:[
+//     Path.join
+// ]
+// })
 @Discord(discordRegex)
 export abstract class AppDiscord {
-    /**
-        * @param message: Type message automatically 
-        * @param client: Client instance injected here
-    */
-    // @On("message")
-    // private onMessage([message]: ArgsOf<"message">, client: Client, guardPayload: any) {
-
-    // }
+    
     @Command("hello")
     hello(message: CommandMessage) {
         message.reply("HI!")
@@ -24,6 +22,9 @@ export abstract class AppDiscord {
 
     @CommandNotFound()
     private notFound(message: CommandMessage) {
-        message.reply("別傻了，我根本沒這功能...")
+        message = message
+        //FIXME remove the call inst. which in message
+        message.reply(`別傻了，我沒有${message.content}...`)
+        
     }
 }
