@@ -1,26 +1,15 @@
 import { ArgsOf, Client, Command, CommandInfos, CommandMessage, CommandNotFound, Description, Discord, ExpressionFunction, Guard, Infos, On, RuleBuilder } from "@typeit/discord";
 import * as Path from 'path'
 const discordRegex = new RegExp("(?=Cier |cier |!).*")
-// @Discord(discordRegex,{
-// import:[
-//     Path.join
-// ]
-// })
-
-@Discord(discordRegex)
-@Description("Admin commands")
+//embed the commands and events files
+@Discord(discordRegex,{
+import:[
+    Path.join(__dirname,"commands","*.ts"),
+    Path.join(__dirname,"events","*.ts")
+]
+})
 export abstract class AppDiscord {
 
-    @Command("help")
-    help(message: CommandMessage) {
-
-        // 取得目前injected的command
-        let commandList: Array<CommandInfos> = Client.getCommands()
-
-
-        message.reply("你可以使用一些命令如下:\n" + commandList.map(e=>e.commandName ))
-        console.log(commandList)
-    }
     @Command("hello")
     hello(message: CommandMessage) {
         message.reply("HI!")
