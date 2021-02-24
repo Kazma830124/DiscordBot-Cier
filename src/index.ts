@@ -4,3 +4,5 @@ import { botInit } from "./bot";
 function main() {
     botInit()
 }
+
+main()
