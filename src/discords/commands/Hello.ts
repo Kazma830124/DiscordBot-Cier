@@ -4,6 +4,5 @@ export abstract class Hello {
     @Command("hello")
     async hello(command: CommandMessage) {
         command.reply("HI")
-        
     }
 }
