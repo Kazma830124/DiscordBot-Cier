@@ -15,7 +15,7 @@ export async function botInit() {
 
     // check token has been in .env file and login to Discord
     if (token)
-        await client.login(token,`${__dirname}/discords/*.js`)
+        await client.login(token,`${__dirname}/discords/AppDiscord.js`)
 }
 
 
