@@ -8,16 +8,15 @@
   "author": "Kazma",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
-    "increase-memory-limit": "^1.0.7",
-    "request": "^2.88.2"
+    "increase-memory-limit": "^1.0.7"
   },
   "devDependencies": {
     "@typeit/discord": "^4.0.9",
     "@types/cheerio": "^0.22.24",
-    "@types/request": "^2.48.5",
     "shx": "^0.3.3",
     "tslib": "^2.1.0",
     "typescript": "^4.2.2"
