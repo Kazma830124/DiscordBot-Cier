@@ -8,19 +8,17 @@ export const getLocationHeader = {
     "referer": "https://weather.com/",
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.151 Safari/537.36"
 }
-
-export const sortedWeatherHeader = {
+export const getWeatherHeader = {
     'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.142 Safari/537.36"
 }
-
-export interface SortedWeatherConfiguration {
+export interface GetWeatherConfiguration {
     url: string,
     method: "GET",
-    headers: {
-        'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.142 Safari/537.36"
-    }
+    headers: Object
+
+
 }
 export interface GetLocationConfiguration {
-    
+
 }
 
