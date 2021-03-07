@@ -1,14 +1,16 @@
 /**
- * Please set the Payload as Array.
+ * Json Post Payload
  * 
- * query: string (location)
+ * set the Payload type with Array.
  * 
- * language: string ("zh-TW")
+ * @param query string (location)
  * 
- * locationType: string ("locale")
+ * @param language string ("zh-TW")
+ * 
+ * @param locationType string ("locale")
  */
 
-export interface PostPayload{
+export interface PostLocationPayload{
     name:"getSunV3LocationSearchUrlConfig",
     params:{
         query:string  
